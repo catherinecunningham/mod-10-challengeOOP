@@ -7,6 +7,21 @@ const Manager = require('./lib/Manager')
 function managerQuestions(){
     inquirer.prompt([
         {
+            type: "input",
+            message: "What is your name?",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your employee ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your email address?",
+            name: "email"
+        },
+        {
             //add Employee questions to each inquirer prompt?
             type: "input",
             message: "What is your office number?",
