@@ -33,6 +33,21 @@ function internQuestions(){
     inquirer.prompt([
         {
             type: "input",
+            message: "What is your name?",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your employee ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your email address?",
+            name: "email"
+        },
+        {
+            type: "input",
             message: "What school do you attend?",
             name: "school"
         },
@@ -40,6 +55,21 @@ function internQuestions(){
 }
 function engineerQuestions(){
     inquirer.prompt([
+        {
+            type: "input",
+            message: "What is your name?",
+            name: "name"
+        },
+        {
+            type: "input",
+            message: "What is your employee ID?",
+            name: "id"
+        },
+        {
+            type: "input",
+            message: "What is your email address?",
+            name: "email"
+        },
         {
             type: "input",
             message: "What is your Github username?",
