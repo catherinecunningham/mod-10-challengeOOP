@@ -1,0 +1,21 @@
+.team-heading {
+    background-color: red;
+}
+
+.team-area {
+    background-color: white;
+}
+
+.employee-card{
+    border-style: solid;
+    border-color: red; 
+}
+
+.card-header {
+    background-color: blue;
+    
+}
+
+.card-title {
+    color: white;
+}
