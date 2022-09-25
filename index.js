@@ -3,6 +3,8 @@ const inquirer = require('inquirer')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 const Manager = require('./lib/Manager')
+const { pageTemplate } = require('./src/page-template')
+
 
 
 function managerQuestions() {
@@ -23,7 +25,6 @@ function managerQuestions() {
             name: "managerEmail"
         },
         {
-            //add Employee questions to each inquirer prompt?
             type: "input",
             message: "What is your office number?",
             name: "managerOffice"
@@ -84,6 +85,7 @@ function addAnotherEmployee() {
     inquirer.prompt([
         {
             name: "more",
+            message: "Do you need to add another employee?",
             choices: ["Intern", "Engineer", "No"]
         },
     ]).then(ans => {
@@ -97,3 +99,11 @@ function addAnotherEmployee() {
     })
 }
 
+function writeTeam() {
+    managerQuestions()
+    addAnotherEmployee()
+}
+
+fs.writeFileSync("./dist/newteam.html",
+
+)
