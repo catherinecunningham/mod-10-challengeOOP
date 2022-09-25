@@ -8,11 +8,19 @@ const generateTeam = team => {
     }
 
     const generateEngineer = engineer => {
-
+        return `
+    <div class="card employee-card">
+    <div class="card-header">
+        <h2 class="card-title">${engineer.getName()}</h2>
+        `
     }
 
     const generateIntern = intern => {
-
+        return `
+        <div class="card employee-card">
+        <div class="card-header">
+            <h2 class="card-title">${intern.getName()}</h2>
+            `
     }
 
     const html = []
@@ -32,7 +40,7 @@ const generateTeam = team => {
         .map(intern => generateIntern(intern)).join("")
     );
 
-    return html.join("") 
+    return html.join("")
 }
 
 module.exports = team => {
