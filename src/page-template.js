@@ -4,7 +4,13 @@ const generateTeam = team => {
     <div class="card employee-card">
     <div class="card-header">
         <h2 class="card-title">${manager.getName()}</h2>
-        <h3 class="card-title><i class="` //finish employee card set up
+        <h3 class="card-title>${manager.getRole()}</h3>
+    </div>
+        <div class="card-content">
+            <div class="row card-line">${manager.getId()}</div>
+            <div class="row card-line">${manager.getEmail()}</div>
+            <div class="row card-line">${manager.getOfficeNumber()}</div>
+        `
     }
 
     const generateEngineer = engineer => {
@@ -12,6 +18,7 @@ const generateTeam = team => {
     <div class="card employee-card">
     <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
+        <h3 class="card-title>${engineer.getRole()}</h3>
         `
     }
 
@@ -20,6 +27,7 @@ const generateTeam = team => {
         <div class="card employee-card">
         <div class="card-header">
             <h2 class="card-title">${intern.getName()}</h2>
+            <h3 class="card-title>${intern.getRole()}</h3>
             `
     }
 
