@@ -21,5 +21,9 @@
 }
 
 .card-content {
+    background-color: aliceblue;
+}
+
+.card-line {
     background-color: white;
 }

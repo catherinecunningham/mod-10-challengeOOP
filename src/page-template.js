@@ -10,7 +10,7 @@ const generateTeam = team => {
             <div class="row card-line">${manager.getId()}</div>
             <div class="row card-line">${manager.getEmail()}</div>
             <div class="row card-line">${manager.getOfficeNumber()}</div>
-        `
+        </div>`
     }
 
     const generateEngineer = engineer => {
@@ -19,7 +19,12 @@ const generateTeam = team => {
     <div class="card-header">
         <h2 class="card-title">${engineer.getName()}</h2>
         <h3 class="card-title>${engineer.getRole()}</h3>
-        `
+        </div>
+        <div class="card-content">
+            <div class="row card-line">${engineer.getId()}</div>
+            <div class="row card-line">${engineer.getEmail()}</div>
+            <div class="row card-line">${engineer.getGithub()}</div>
+        </div>`
     }
 
     const generateIntern = intern => {
@@ -28,7 +33,12 @@ const generateTeam = team => {
         <div class="card-header">
             <h2 class="card-title">${intern.getName()}</h2>
             <h3 class="card-title>${intern.getRole()}</h3>
-            `
+            </div>
+        <div class="card-content">
+            <div class="row card-line">${intern.getId()}</div>
+            <div class="row card-line">${intern.getEmail()}</div>
+            <div class="row card-line">${intern.getSchool()}</div>
+        </div>`
     }
 
     const html = []
