@@ -3,12 +3,12 @@ const inquirer = require('inquirer')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 const Manager = require('./lib/Manager')
-//help
+
+// link to page template file
 const pageTemplate = require('./src/page-template')
 let team = []
 
-
-
+// manager prompts
 function managerQuestions() {
     inquirer.prompt([
         {
@@ -38,6 +38,7 @@ function managerQuestions() {
             name: "managerOffice"
         },
     ])
+    // push answers
     .then(ans => {
         let manager = new Manager(ans.managerName, ans.role, ans.managerId, ans.managerEmail, ans.managerOffice)
         team.push(manager)
@@ -45,6 +46,7 @@ function managerQuestions() {
     })
 }
 
+// intern prompts
 function internQuestions() {
     inquirer.prompt([
         {
@@ -74,6 +76,7 @@ function internQuestions() {
             name: "internSchool"
         },
     ])
+    // push answers
     .then(ans => {
         let intern = new Intern(ans.internName, ans.role, ans.internId, ans.internEmail, ans.internSchool)
         team.push(intern)
@@ -81,6 +84,7 @@ function internQuestions() {
     })
 }
 
+// engineer prompts
 function engineerQuestions() {
     inquirer.prompt([
         {
@@ -110,12 +114,15 @@ function engineerQuestions() {
             name: "engineerGithub"
         },
     ])
+    // push answers
     .then(ans => {
         let engineer = new Engineer(ans.engineerName, ans.role, ans.engineerId, ans.engineerEmail, ans.engineerGithub)
         team.push(engineer)
         addAnotherEmployee()
     })
 }
+
+// prompt user to fill out information for multiple employees
 function addAnotherEmployee() {
     inquirer.prompt([
         {
@@ -134,9 +141,11 @@ function addAnotherEmployee() {
         }
     })
 }
-//help
+
+// run sequence starting with manager prompts
 managerQuestions()
 
+// write team and write file with page template link
 function writeTeam(){
     console.log(team)
     

@@ -1,3 +1,4 @@
+// functions to create individual employee cards
 const generateTeam = team => {
     const generateManager = manager => {
         return `
@@ -44,6 +45,7 @@ const generateTeam = team => {
         </div>`
     }
 
+    //empty array for input
     const html = []
 
     html.push(team
@@ -64,8 +66,10 @@ const generateTeam = team => {
     return html.join("")
 }
 
+//export team information to index page
 module.exports = team => {
 
+    //page setup with generateTeam function embedded
     return `
     <!DOCTYPE html>
 <html lang="en">
