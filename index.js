@@ -17,6 +17,12 @@ function managerQuestions() {
             name: "managerName"
         },
         {
+            type: "list",
+            message: "What is your role?",
+            name: "role",
+            choices: ["Manager", "Engineer", "Intern"]
+        },
+        {
             type: "input",
             message: "What is your employee ID?",
             name: "managerId"
@@ -33,7 +39,7 @@ function managerQuestions() {
         },
     ])
     .then(ans => {
-        let manager = new Manager(ans.managerName, ans.managerId, ans.managerEmail, ans.managerOffice)
+        let manager = new Manager(ans.managerName, ans.role, ans.managerId, ans.managerEmail, ans.managerOffice)
         team.push(manager)
         addAnotherEmployee()
     })
@@ -45,6 +51,12 @@ function internQuestions() {
             type: "input",
             message: "What is your name?",
             name: "internName"
+        },
+        {
+            type: "list",
+            message: "What is your role?",
+            name: "role",
+            choices: ["Manager", "Engineer", "Intern"]
         },
         {
             type: "input",
@@ -63,7 +75,7 @@ function internQuestions() {
         },
     ])
     .then(ans => {
-        let intern = new Intern(ans.internName, ans.internId, ans.internEmail, ans.internSchool)
+        let intern = new Intern(ans.internName, ans.role, ans.internId, ans.internEmail, ans.internSchool)
         team.push(intern)
         addAnotherEmployee()
     })
@@ -75,6 +87,12 @@ function engineerQuestions() {
             type: "input",
             message: "What is your name?",
             name: "engineerName"
+        },
+        {
+            type: "list",
+            message: "What is your role?",
+            name: "role",
+            choices: ["Manager", "Engineer", "Intern"]
         },
         {
             type: "input",
@@ -93,7 +111,7 @@ function engineerQuestions() {
         },
     ])
     .then(ans => {
-        let engineer = new Engineer(ans.engineerName, ans.engineerID, ans.engineerEmail, ans.engineerGithub)
+        let engineer = new Engineer(ans.engineerName, ans.role, ans.engineerId, ans.engineerEmail, ans.engineerGithub)
         team.push(engineer)
         addAnotherEmployee()
     })

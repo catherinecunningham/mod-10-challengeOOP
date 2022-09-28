@@ -1,5 +1,3 @@
-
-
 const generateTeam = team => {
     const generateManager = manager => {
         return `
@@ -12,6 +10,7 @@ const generateTeam = team => {
             <div class="row card-line">${manager.getId()}</div>
             <div class="row card-line">${manager.getEmail()}</div>
             <div class="row card-line">${manager.getOfficeNumber()}</div>
+        </div>
         </div>`
     }
 
@@ -26,6 +25,7 @@ const generateTeam = team => {
             <div class="row card-line">${engineer.getId()}</div>
             <div class="row card-line">${engineer.getEmail()}</div>
             <div class="row card-line">${engineer.getGithub()}</div>
+        </div>
         </div>`
     }
 
@@ -40,6 +40,7 @@ const generateTeam = team => {
             <div class="row card-line">${intern.getId()}</div>
             <div class="row card-line">${intern.getEmail()}</div>
             <div class="row card-line">${intern.getSchool()}</div>
+        </div>
         </div>`
     }
 
@@ -90,7 +91,7 @@ module.exports = team => {
     </div>
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
+            <div class="team-area col-12 d-flex flex-wrap justify-content-center">
                 ${generateTeam(team)}
             </div>
         </div>
