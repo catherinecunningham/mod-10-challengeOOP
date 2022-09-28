@@ -1,5 +1,9 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .team-heading {
-    background-color: blue;
+    background-color: navy;
     color: white;
 }
 
@@ -9,11 +13,11 @@
 
 .employee-card{
     border-style: solid;
-    border-color: red; 
+    border-color: lightcoral; 
 }
 
 .card-header {
-    background-color: blue;
+    background-color: navy;
     
 }
 
@@ -21,10 +25,8 @@
     color: white;
 }
 
-.card-content {
-    background-color: aliceblue;
-}
-
 .card-line {
-    background-color: white;
+    font-size: 20px;
+    color:aliceblue;
+    justify-content: center;
 }
