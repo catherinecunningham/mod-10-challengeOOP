@@ -6,3 +6,5 @@ This application was made with assistance from TA's, tutors, and a review sessio
 
 An example of the HTML page created using this app is shown in the screenshot below:
 <img width="753" alt="image" src="https://user-images.githubusercontent.com/107148691/192677586-a9b7965e-2417-4acc-8531-7229a3531e56.png">
+
+A link to the video walkthrough displaying the app's functionality can be found here:  https://drive.google.com/file/d/1gFj0fiwdJBKllpSrnlPRpA4FwbLXLk2p/view?usp=sharing
